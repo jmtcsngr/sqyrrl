@@ -1,0 +1,7 @@
+Host = "0.0.0.0"
+Port  = "443"
+IRODSEnvFilePath = "/workspaces/sqyrrl/app_irods_environment.json"
+IRODSPassword=""
+CertFilePath = "/workspaces/sqyrrl/cert.pem"
+KeyFilePath = "/workspaces/sqyrrl/key.pem"
+IndexInterval = "60s"
