@@ -10,14 +10,14 @@
 		}
 	},
 	"workspaceFolder": "/workspaces",
-	"postCreateCommand": "cd sqyrrl && make test"
+	"postCreateCommand": "cd sqyrrl && make test",
 	
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// 1247 for irods and 3333 for sqyrrl
-	"forwardPorts": [1247, 3333],
+	"forwardPorts": [1247, 3333]
 
 	// Use 'postCreateCommand' to run commands after the container is created.
 	// "postCreateCommand": "uname -a",
