@@ -5,25 +5,18 @@
 	"dockerComposeFile": "docker-compose.devcontainer.yaml",
 	"service": "devcontainer",
 	"features": {
-		"ghcr.io/devcontainers/features/docker-outside-of-docker:1": {
-			"moby": true,
-			"installDockerBuildx": true,
-			"installDockerComposeSwitch": true,
-			"version": "latest",
-			"dockerDashComposeVersion": "v2"
-		},
 		"ghcr.io/devcontainers/features/go:1": {
 			"version": "1.23"
 		}
 	},
 	"workspaceFolder": "/workspaces",
-	"postCreateCommand": "sudo chown -R vscode:vscode /workspaces/volume && ( [ -d /workspaces/volume/sqyrrl ] || git clone https://github.com/wtsi-npg/sqyrrl.git /workspaces/volume/sqyrrl ) && cd /workspaces/volume/sqyrrl && make test"
+	"postCreateCommand": "cd sqyrrl && make test"
 	
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
-	// "forwardPorts": [],
+	"forwardPorts": [1247],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
 	// "postCreateCommand": "uname -a",
