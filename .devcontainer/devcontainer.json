@@ -10,7 +10,7 @@
 		}
 	},
 	"workspaceFolder": "/workspaces",
-	"postCreateCommand": "cd sqyrrl && make test && make build && make && cp .devcontainer/helpers/* . && bash generate_cert.sh",
+	"postCreateCommand": "cd sqyrrl && make test && make install && cp .devcontainer/helpers/* . && bash generate_cert.sh && ./start.sh || ./start.sh",
 	
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},
